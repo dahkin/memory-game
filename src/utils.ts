@@ -1,4 +1,4 @@
-export const maxSteps = 4;
+export const maxSteps = 40;
 
 export const cardsImages = [
 	require('./images/1.svg'),
