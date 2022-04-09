@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;900&display=swap');
+@import 'mixins';
+
+// Variables
+:root {
+	--color-primary: #0083FC;
+	--color-primary-dark: #007BF3;
+	--color-accent: #F53;
+	--color-grey: #E6E6E6;
+	--color-grey-dark: #E5E5E5;
+	--color-white: #FFF;
+	--container-width: 1440px;
+	--grid-gap: 13px;
+	--border-radius: 12px;
+}
+
+// Reset
+* {
+	all: unset;
+	display: revert;
+	box-sizing: border-box;
+}
+
+// Animations
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+// Body
+body {
+	min-width: 320px;
+	background-color: var(--color-white);
+	text-transform: uppercase;
+	line-height: 20px;
+	font-family: 'Rubik', sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	color: var(--color-primary);
+
+	@include for-tablet {
+		line-height: 30px;
+		font-size: 24px;
+	}
+}

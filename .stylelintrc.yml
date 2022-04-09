@@ -1,0 +1,290 @@
+{
+    'extends': 'stylelint-config-standard-scss',
+    'plugins':
+        [
+            'stylelint-declaration-strict-value',
+            'stylelint-scss',
+            'stylelint-order',
+        ],
+    'rules': {
+            'color-hex-case': 'upper', # autofixable
+            'color-hex-length': 'short', # autofixable
+            'color-no-invalid-hex': true,
+            'font-family-name-quotes': 'always-unless-keyword',
+            'font-family-no-duplicate-names': true,
+            'font-family-no-missing-generic-family-keyword': null,
+            'function-calc-no-unspaced-operator': true,
+            'function-comma-newline-after': null,
+            'function-comma-newline-before': null,
+            'function-comma-space-after': 'always', # autofixable
+            'function-comma-space-before': 'never', # autofixable
+            'function-linear-gradient-no-nonstandard-direction': true,
+            'function-max-empty-lines': 0,
+            'function-name-case': 'lower', # autofixable
+            'function-parentheses-space-inside': 'never',
+            'function-url-quotes': null,
+            'function-whitespace-after': 'always', # autofixable
+            'number-leading-zero': 'never', # autofixable
+            'number-no-trailing-zeros': true, # autofixable
+            'length-zero-no-unit': true, # autofixable
+            'string-no-newline': true,
+            'string-quotes': 'single', # autofixable
+            'unit-case': 'lower',
+            'unit-no-unknown': true,
+            'value-keyword-case': 'lower',
+            'value-list-comma-newline-after': null,
+            'value-list-comma-newline-before': null,
+            'value-list-comma-space-after': null,
+            'value-list-comma-space-before': null,
+            'value-list-max-empty-lines': 0,
+            'value-no-vendor-prefix': true,
+            'selector-no-vendor-prefix': true,
+            'selector-class-pattern': null,
+            'shorthand-property-no-redundant-values': true, # autofixable
+            'property-case': 'lower', # autofixable
+            'property-no-vendor-prefix': true,
+            'declaration-no-important': true,
+            'keyframe-declaration-no-important': true,
+            'declaration-bang-space-after': 'never', # autofixable
+            'declaration-bang-space-before': 'always', # autofixable
+            'declaration-colon-space-after': 'always', # autofixable
+            'declaration-colon-space-before': 'never', # autofixable
+            'declaration-block-no-duplicate-properties': true,
+            'declaration-block-no-shorthand-property-overrides': null,
+            'declaration-block-semicolon-newline-after': 'always', # autofixable
+            'declaration-block-semicolon-newline-before': 'never-multi-line',
+            'declaration-block-semicolon-space-after': 'always-single-line',
+            'declaration-block-semicolon-space-before': 'never', # autofixable
+            'declaration-block-trailing-semicolon': 'always',
+            'declaration-empty-line-before': 'never',
+            'block-closing-brace-empty-line-before': 'never', # autofixable
+            'block-closing-brace-newline-after': [
+                    'always',
+                    { 'ignoreAtRules': ['if', 'else'] },
+                ], # autofixable
+            'block-closing-brace-newline-before': 'always-multi-line', # autofixable
+            'block-closing-brace-space-before': 'never-single-line', # autofixable
+            'block-no-empty': true,
+            'block-opening-brace-newline-after': 'always-multi-line', # autofixable
+            'block-opening-brace-space-after': 'never-single-line', # autofixable
+            'block-opening-brace-space-before': 'always', # autofixable
+            'selector-attribute-brackets-space-inside': 'never', # autofixable
+            'selector-attribute-operator-space-after': 'never', # autofixable
+            'selector-attribute-operator-space-before': 'never', # autofixable
+            'selector-attribute-quotes': 'always',
+            'selector-combinator-space-after': 'always', # autofixable
+            'selector-combinator-space-before': 'always', # autofixable
+            'selector-descendant-combinator-no-non-space': true,
+            'selector-max-id': 0,
+            'selector-pseudo-class-case': 'lower', # autofixable
+            'selector-pseudo-class-no-unknown': [
+                true,
+                {
+                    'ignorePseudoClasses': ['global']
+                }
+            ],
+            'selector-pseudo-class-parentheses-space-inside': 'never', # autofixable
+            'selector-pseudo-element-case': 'lower',
+            'selector-pseudo-element-colon-notation': 'double', # autofixable
+            'selector-pseudo-element-no-unknown': true,
+            'selector-type-case': 'lower', # autofixable
+            'selector-type-no-unknown': true,
+            'selector-max-empty-lines': 0,
+            'selector-max-specificity': '0,5,1',
+            'selector-list-comma-newline-after': 'always-multi-line',
+            'selector-list-comma-newline-before': 'never-multi-line',
+            'selector-list-comma-space-after': null,
+            'selector-list-comma-space-before': 'never', # autofixable
+            'rule-empty-line-before':
+                [
+                    'always-multi-line',
+                    { 'ignore': ['after-comment', 'first-nested'] },
+                ],
+            'max-line-length': null,
+            'max-nesting-depth': 5,
+            'media-feature-colon-space-after': 'never', # autofixable
+            'media-feature-colon-space-before': 'never', # autofixable
+            'media-feature-name-case': 'lower', # autofixable
+            'media-feature-name-no-unknown': true,
+            'media-feature-name-no-vendor-prefix': true,
+            'media-feature-parentheses-space-inside': 'never',
+            'media-feature-range-operator-space-after': 'always', # autofixable
+            'media-feature-range-operator-space-before': 'always', # autofixable
+            'media-query-list-comma-newline-after': 'always-multi-line',
+            'media-query-list-comma-newline-before': 'never-multi-line',
+            'media-query-list-comma-space-after': 'always-single-line', # autofixable
+            'media-query-list-comma-space-before': 'never', # autofixable
+            'at-rule-empty-line-before':
+                [
+                    'always',
+                    {
+                        'except': ['first-nested', 'blockless-after-blockless'],
+                        'ignore': ['after-comment'],
+                        'ignoreAtRules': ['else']
+                    },
+                ],
+            'at-rule-name-case': 'lower', # autofixable
+            'at-rule-name-space-after': 'always', # autofixable
+            'at-rule-no-unknown':
+                [
+                    true,
+                    {
+                        'ignoreAtRules':
+                            [
+                                'mixin',
+                                'extend',
+                                'define-mixin',
+                                'include',
+                                'content',
+                                'rules',
+                                'function',
+                                'return',
+                                'if',
+                                'else',
+                                'for',
+                                'each',
+                                'warn',
+                                'use'
+                            ],
+                    },
+                ],
+            'at-rule-no-vendor-prefix': true,
+            'at-rule-semicolon-newline-after': 'always',
+            'comment-no-empty': true,
+            'indentation': 'tab', # autofixable
+            'max-empty-lines': 2,
+            'no-duplicate-selectors': true,
+            'no-duplicate-at-import-rules': true,
+            'no-descending-specificity': null,
+            'no-empty-source': true,
+            'no-eol-whitespace': true, # autofixable
+            'no-extra-semicolons': true,
+            'no-invalid-double-slash-comments': true,
+            'no-missing-end-of-source-newline': true,
+            'scale-unlimited/declaration-strict-value':
+                ["/color$/", { ignoreValues: ['transparent', 'inherit'] }],
+            'scss/dollar-variable-colon-space-after': 'always',
+            'scss/selector-no-redundant-nesting-selector': true,
+            'scss/comment-no-empty': null,
+            'scss/at-else-empty-line-before': 'never',
+            'order/properties-order':
+                [
+                    'content',
+                    'position',
+                    'top',
+                    'right',
+                    'bottom',
+                    'left',
+                    'display',
+                    'float',
+                    'clear',
+                    'overflow',
+                    'flex',
+                    'flex-direction',
+                    'flex-wrap',
+                    'justify-content',
+                    'align-self',
+                    'align-items',
+                    'flex-grow',
+                    'order',
+                    'margin',
+                    'margin-top',
+                    'margin-right',
+                    'margin-bottom',
+                    'margin-left',
+                    'padding',
+                    'padding-top',
+                    'padding-right',
+                    'padding-bottom',
+                    'padding-left',
+                    'width',
+                    'min-width',
+                    'max-width',
+                    'height',
+                    'min-height',
+                    'max-height',
+                    'border',
+                    'border-top',
+                    'border-right',
+                    'border-bottom',
+                    'border-left',
+                    'border-width',
+                    'border-top-width',
+                    'border-right-width',
+                    'border-bottom-width',
+                    'border-left-width',
+                    'border-style',
+                    'border-top-style',
+                    'border-right-style',
+                    'border-bottom-style',
+                    'border-left-style',
+                    'border-radius',
+                    'border-top-left-radius',
+                    'border-top-right-radius',
+                    'border-bottom-left-radius',
+                    'border-bottom-right-radius',
+                    'border-color',
+                    'border-top-color',
+                    'border-right-color',
+                    'border-bottom-color',
+                    'border-left-color',
+                    'outline',
+                    'outline-color',
+                    'outline-offset',
+                    'outline-style',
+                    'outline-width',
+                    'background',
+                    'background-color',
+                    'background-image',
+                    'background-repeat',
+                    'background-position',
+                    'background-size',
+                    'vertical-align',
+                    'text-align',
+                    'text-decoration',
+                    'text-indent',
+                    'text-overflow',
+                    'text-rendering',
+                    'text-shadow',
+                    'text-transform',
+                    'text-wrap',
+                    'line-height',
+                    'letter-spacing',
+                    'list-style',
+                    'white-space',
+                    'word-spacing',
+                    'object-fit',
+                    'object-position',
+                    'font',
+                    'font-family',
+                    'font-size',
+                    'font-smoothing',
+                    'font-style',
+                    'font-variant',
+                    'font-weight',
+                    'color',
+                    'columns',
+                    'column-gap',
+                    'column-fill',
+                    'column-rule',
+                    'column-span',
+                    'column-count',
+                    'column-width',
+                    'transform',
+                    'transition',
+                    'border-collapse',
+                    'border-spacing',
+                    'box-shadow',
+                    'caption-side',
+                    'cursor',
+                    'empty-cells',
+                    'opacity',
+                    'quotes',
+                    'speak',
+                    'table-layout',
+                    'visibility',
+                    'z-index',
+                    'animation',
+                ],
+        },
+}

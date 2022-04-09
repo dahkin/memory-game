@@ -1,0 +1,23 @@
+{
+    "singleQuote": true,
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "printWidth": 100,
+    "overrides": [
+        {
+            "files": ["*.js", "*.jsx"],
+            "options": {
+                "semi": true,
+                "jsxSingleQuote": false,
+                "bracketSameLine": false,
+                "useTabs": false
+            }
+        },
+        {
+            "files": ["*.scss"],
+            "options": {
+                "useTabs": true
+            }
+        }
+    ]
+}
