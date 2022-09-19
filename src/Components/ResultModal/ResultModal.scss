@@ -39,6 +39,8 @@
 }
 
 .result-modal__button {
+	all:unset;
+	display: revert;
 	padding: 0 20px;
 	max-width: 100%;
 	height: 50px;

@@ -48,39 +48,45 @@ export const App = () => {
 
     const handleClick = (index: number) => {
         if (activeCards.length < 2 && counter < maxSteps) {
-            // Open card and increase the counter
+            // Open card
             if (!cardItems[index].isActive) {
                 setCardItems((prevItems) =>
-                    prevItems.map((obj, i) => (i === index ? { ...obj, isActive: true } : obj))
+                    prevItems.map((obj, i) => (i === index ? {...obj, isActive: true} : obj))
                 );
                 setActiveCards((activeCards) => [...activeCards, cardItems[index].name]);
-                setCounter((counter) => counter + 1);
             }
         }
     };
 
     useEffect(() => {
-        setTimeout(() => {
             // Check two opened cards
-            if (activeCards.length == 2) {
+            if (activeCards.length === 2) {
+                // Increase counter
+                setCounter((counter) => counter + 1);
                 // If they are equal - remove, else - close
                 if (activeCards[0] === activeCards[1]) {
-                    setCardItems((prevItems) =>
-                        prevItems.map((obj) =>
-                            obj.isActive === true ? { ...obj, isRemoved: true } : obj
+                    setTimeout(() => {
+                        setCardItems((prevItems) =>
+                            prevItems.map((obj) =>
+                                obj.isActive === true ? { ...obj, isRemoved: true } : obj
+                            )
                         )
-                    );
+                    }, 800);
                     // Increase success counter
                     setSuccessCounter(successCounter + 2);
                 } else {
-                    setCardItems((prevItems) =>
-                        prevItems.map((obj) => ({ ...obj, isActive: false }))
-                    );
+                    setTimeout(() => {
+                        setCardItems((prevItems) =>
+                            prevItems.map((obj) => ({ ...obj, isActive: false }))
+                        )
+                    }, 800);
                 }
-                // Clean opened cards
-                setActiveCards([]);
+                setTimeout(() => {
+                    // Clean opened cards
+                    setActiveCards([]);
+                }, 800);
             }
-        }, 800);
+
     }, [activeCards]);
 
     const startAgain = () => {
@@ -130,12 +136,10 @@ export const App = () => {
                     </div>
                 </main>
 
-                {/* Show failure modal */}
-                {counter >= maxSteps && <ResultModal success={false} onBtnClick={startAgain} />}
-                {/* Show success modal */}
-                {successCounter === cardItems.length && (
+                {/* Show success modal or failure modal */}
+                {successCounter === cardItems.length ? (
                     <ResultModal success={true} counter={counter} onBtnClick={startAgain} />
-                )}
+                ) : counter >= maxSteps && <ResultModal success={false} onBtnClick={startAgain} />}
             </section>
         </React.Fragment>
     );
